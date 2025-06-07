@@ -1,8 +1,8 @@
 ---
 title: Hooks
 sidebar_label: hooks
-keywords: [qbox, fivem, qbx_core, modules, hooks]
-description: Documentation for the hooks module in the qbx_core resource. This module provides functionality for registering and managing event hooks, allowing third-party resources to modify behavior without directly changing the resource code.
+keywords: [qbox, fivem, modules, hooks]
+description: Documentation for the hooks module in the 420 resource. This module provides functionality for registering and managing event hooks, allowing third-party resources to modify behavior without directly changing the resource code.
 ---
 
 # hooks
@@ -40,7 +40,7 @@ exports.my_resource:removeHooks(id)
 An example hook setup in your resource
 
 ```lua
-local triggerEventHooks = require '@qbx_core.modules.hooks' -- Import triggerEventHooks function from hooks module
+local triggerEventHooks = require '@papi_management.modules.hooks' -- Import triggerEventHooks function from hooks module
 
 -- Example of some sort of event that could be in your resource
 RegisterNetEvent('your_resource:server:check_condition', function(source)
@@ -53,7 +53,7 @@ end)
 Now a 3rd party resource can modify the behavior of your resource without having to change any of your code
 
 ```lua
-exports.qbx_core:registerHook('checkCondition', function(payload)
+exports.papi_management:registerHook('checkCondition', function(payload)
   -- payload contains everything passed into triggerEventHooks, which will depend on the resource to document
   if payload.myNumber == 10 then
     return true -- Continue as normal

@@ -1,0 +1,53 @@
+---
+title: Server Events
+sidebar_label: server
+keywords: [fivem, events]
+description: This document provides comprehensive documentation for server-side events within the 420_script papi_management. It outlines both non-networked and networked events that are triggered on the client, offering details on their purpose, usage, and any associated data structures (types).
+---
+
+# Server Events
+
+:::warning
+  These events **MUST NOT** be triggered by any other scripts.
+:::
+
+:::info
+  Some of these events use custom types.
+  You can learn more about those in the Types section of this resource.
+:::
+
+## Non-Networked Events
+
+### onPlayerUnload
+
+untile
+
+```lua
+AddEventHandler('papi_management:server:onPlayerUnload', function(source) end)
+```
+
+- source: `integer`
+
+### OnPermissionUpdate
+
+Triggered when the player's permissions are updated. \
+Only applies to permissions created through crews permission functions.
+
+```lua
+AddEventHandler('papi_management:server:onPermissionUpdate', function(source, groupeType, ...)
+
+end)
+```
+
+- source: `integer`
+
+### onCrewUpdate
+
+Triggered when a player's job updates.
+
+```lua
+AddEventHandler('papi_management:server:onCrewUpdate', function(source, crew, lastCrew) end)
+```
+
+- source: `integer`
+- crew: [`PlayerCrew`](../types/player.mdx#playercrew)

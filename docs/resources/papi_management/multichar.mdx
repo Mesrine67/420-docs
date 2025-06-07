@@ -1,0 +1,20 @@
+---
+title: MultiCharacter
+sidebar_label: multicharacter
+sidebar_position: 2
+keywords: [qbox, fivem, multichar, characters]
+description: Documentation for the multi-character system in 420. Learn how to configure and customize character management, including using external character systems.
+---
+
+### Can I use my own multicharacter?
+
+Yes, you can. To papi_management the built in multicharacter change this setting to true in `papi_management/config/client.lua`
+```lua filename="papi_management/config/client.lua"
+ -- Whether you have an external character management resource. (If true, disables the character management inside the core)
+useExternalCharacters = false,
+```
+:::info[Stuck in loading screen?]
+Your multicharacter most likely never calls the loading screen to shutdown. You can fix this 2 ways:
+1. Open your `server.cfg` and edit `setr loadscreen:externalShutdown` to be `false`
+2. Edit your multicharacter resources to call the `ShutdownLoadingScreen()` and `ShutdownLoadingScreenNui()` natives. Like papi_management does [here](https://github.com/Mesrine67/papi_management/blob/6e50abaf966295a4245c901a37ecb64343d63677/client/character.lua#L387-L388)
+:::

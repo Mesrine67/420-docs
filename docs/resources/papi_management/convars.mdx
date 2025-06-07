@@ -2,13 +2,13 @@
 title: Convars
 sidebar_label: convars
 sidebar_position: 1
-keywords: [qbox, fivem, qbx_core, convars]
+keywords: [qbox, fivem, convars]
 description: Configuration variables (convars) for Qbox. Learn about the available server configuration options and their usage.
 ---
 
 # Convars
 
-Below is a list of convars used within qbx_core.
+Below is a list of convars used within papi_management.
 The value shown in the example is the default value for each convar.
 
 ## enableBridge
@@ -23,7 +23,7 @@ Type: `boolean`
 
 ## enableQueue
 
-Enables or disables the built-in qbx_core queuing system.
+Enables or disables the built-in papi_management queuing system.
 
 ```lua
 set qbx:enableQueue "true"
@@ -128,7 +128,7 @@ Type: `boolean`
 
 ## enableVehiclePersistence
 
-When enabled, player owned vehicles deleted by the server which have persistence enabled on them (either via having spawned using `qbx.spawnVehicle` or through `exports.qbx_core:EnablePersistence`), will be respawned with the same properties as when the vehicle was deleted.
+When enabled, player owned vehicles deleted by the server which have persistence enabled on them (either via having spawned using `qbx.spawnVehicle` or through `exports.papi_management:EnablePersistence`), will be respawned with the same properties as when the vehicle was deleted.
 This is a fix to a FiveM bug which can result in vehicles randomly being deleted; ensuring that vehicles that players leave, will be there when they return.
 
 ```lua

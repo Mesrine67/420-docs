@@ -1,0 +1,59 @@
+---
+title: Client Exports
+sidebar_label: client
+keywords: [fivem, exports]
+description: Documentation for client-side exports. Learn about available functions for notifications, group management, and other client-side utilities.
+---
+
+# Client Exports
+
+## Dispatch
+
+Text box popup which disappears after a given amount of time.
+
+```lua
+exports.papi_management:dispatch(code, offense, duration, description, notifyPosition, notifyStyle, notifyIcon, notifyIconColor)
+```
+
+- offense: `table | string`
+  - The offense of the notification.
+  - Can be a string, or a table containing:
+    - offense?: `string`
+    - caption?: `string`
+- code?: `'10-90' | '10-91' | '10-923' | '10-93'`
+  - Default: `'10-90'`
+- duration?: `integer`
+  - The duration in milliseconds for which the notification will remain on screen.
+  - Default: `5000`
+- description?: `string`
+  - Additional text under the title.
+- notifyPosition?: `'top' | 'top-right' | 'top-left' | 'bottom' | 'bottom-right' | 'bottom-left' | 'center-right' | 'center-left'` | 'custom'`
+  - Default: `top-right` (changable in config)
+- notifyStyle?: `table`
+  - Custom styling. Refer to [`lib.notify`].
+- notifyIcon?: `string`
+  - Font Awesome 6 icon name.
+- notifyIconColor?: `string`
+  - Custom color for `notifyIcon`.
+
+## getCrew
+
+Returns a combined table of all the groups the current player currently has.
+
+```lua
+exports.papi_management:getCrew()
+```
+
+Returns:
+
+--[[
+    {
+        "isboss": false,
+        "name": 'ballas',
+        "label": 'Ballas',
+        "grade": 5,
+        "grade_label": "OG",
+        "grade_name": "og",
+        "perms": {'stash_ballas', 'stash_ballas_og'},
+    }
+]]

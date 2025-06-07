@@ -36,11 +36,11 @@ Servers currently using QBCore and servers interested in running QBCore in the f
 
 ## Is Qbox ready to use?
 
-Since qbx_core is backwards compatible with qb-core resources, we recommend using only the released Qbox resources for a stable experience.
+Since papi_management is backwards compatible with qb-core resources, we recommend using only the released Qbox resources for a stable experience.
 
 ## Are multijob resources compatible with Qbox?
 
-They can be, but only if calling qbx_core exports to add/modify/remove player's jobs.
+They can be, but only if calling papi_management exports to add/modify/remove player's jobs.
 The two common issues with multijob resources are:
 - Directly accessing Qbox's database tables
 - Maintaining Qbox's core data in a resource's own table
@@ -58,24 +58,24 @@ We wouldn't release resources in beta if we didn't think they were stable and re
 
 ## Common Problems and Questions
 
-### No such export GetCoreObject in resource qbx_core
+### No such export GetCoreObject in resource papi_management
 
 Qbox does not have the core object. However, you can continue to use `exports['qb-core']:GetCoreObject()` to get a core object from Qbox's QB bridge layer.
 
-### [WARN] This resource is still using the deprecated qbx_core utils! ###
+### [WARN] This resource is still using the deprecated papi_management utils! ###
 
 If you are receiving this warning then please download the latest release/commit for that resource. With the exception of archived resources this dependency has been resolved.
 
 ### Can I use my own multicharacter?
 
-Yes, you can. To disable the built in multicharacter change this setting to true in `qbx_core/config/client.lua`
-```lua filename="qbx_core/config/client.lua"
+Yes, you can. To disable the built in multicharacter change this setting to true in `papi_management/config/client.lua`
+```lua filename="papi_management/config/client.lua"
     useExternalCharacters = false, -- Whether you have an external character management resource. (If true, disables the character management inside the core)
 ```
 :::info[Stuck in loading screen?]
 Your multicharacter most likely never calls the loading screen to shutdown. You can fix this 2 ways:
 1. Open your `server.cfg` and edit `setr loadscreen:externalShutdown` to be `false`
-2. Edit your multicharacter resources to call the `ShutdownLoadingScreen()` and `ShutdownLoadingScreenNui()` natives. Like qbx_core does [here](https://github.com/Qbox-project/qbx_core/blob/6e50abaf966295a4245c901a37ecb64343d63677/client/character.lua#L387-L388)
+2. Edit your multicharacter resources to call the `ShutdownLoadingScreen()` and `ShutdownLoadingScreenNui()` natives. Like papi_management does [here](https://github.com/Qbox-project/papi_management/blob/6e50abaf966295a4245c901a37ecb64343d63677/client/character.lua#L387-L388)
 :::
 
 ### Can I use my own notification system?
@@ -99,9 +99,9 @@ This is due to Github rate limits which is outside our control. You can keep try
 
 ### SCRIPT ERROR: failed to load model
 
-This is likely due to a low performance PC. If the error is `qbx_core` you can adjust the timeout in `qbx_core/config/client.lua` under `loadingModelsTimeout`
+This is likely due to a low performance PC. If the error is `papi_management` you can adjust the timeout in `papi_management/config/client.lua` under `loadingModelsTimeout`
 
-### Do I need to add items to qbx_core/shared/items.lua and ox_inventory?
+### Do I need to add items to papi_management/shared/items.lua and ox_inventory?
 
 No you don't need to add items there unless they are being accessed in a resource via the bridge such as a script that is not ox_inventory compatible. Items added here will be automatically added to `ox_inventory` but you will have to manually add things like client/server exports in the `ox_inventory/data/items.lua`
 

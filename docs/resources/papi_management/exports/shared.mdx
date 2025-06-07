@@ -1,0 +1,63 @@
+---
+title: Shared Exports
+sidebar_label: shared
+keywords: [qbox, fivem, exports]
+description: Documentation for shared exports. Learn about available functions for retrieving data like all the jobs, gangs, ... .
+---
+
+# Shared Exports
+
+## getCrews
+
+Returns the crews table.
+
+```lua
+exports.papi_management:getCrews()
+```
+
+Returns: [`table<string, Crew>`](../types/crew.mdx)
+
+## getCrew
+
+Returns the given crew if it exists.
+
+```lua
+exports.papi_management:getCrew(crewName)
+```
+- crewName: `string`
+
+Returns: [`Crew?`](../types/crew.mdx)
+
+## GetVehiclesByName
+
+Returns a table mapping vehicle name to vehicle.
+
+```lua
+exports.x_vehicles:GetVehiclesByName(vehicle)
+```
+
+- vehicle?: `string`
+
+Returns: [`table<string, Vehicle>`](../types/vehicle.mdx#vehicle)
+
+## GetVehiclesByHash
+
+Returns a table mapping vehicle hash to vehicle.
+
+```lua
+exports.x_vehicles:GetVehiclesByHash(vehicle)
+```
+
+- vehicle?: `number`
+
+Returns: [`table<number, Vehicle>`](../types/vehicle.mdx#vehicle)
+
+## GetVehiclesByCategory
+
+Returns a table mapping vehicle category to vehicles.
+
+```lua
+exports.x_vehicles:GetVehiclesByCategory()
+```
+
+Returns: [`table<string, Vehicle[]>`](../types/vehicle.mdx#vehicle)

@@ -1,0 +1,51 @@
+---
+title: Client Events
+sidebar_label: client
+keywords: [fivem, events]
+description: This document provides comprehensive documentation for client-side events within the 420_script papi_management. It outlines both non-networked and networked events that are triggered on the client, offering details on their purpose, usage, and any associated data structures (types).
+---
+
+# Client Events
+
+:::warning
+  These events **MUST NOT** be triggered by any other scripts.
+:::
+
+:::info
+  Some of these events use custom types.
+  You can learn more about those in the Types section of this resource.
+:::
+
+## Non-Networked Events
+
+### onPlayerLoaded
+
+Triggered when the player finishes spawning.
+
+```lua
+AddEventHandler('papi_crews:client:onPlayerLoaded', function() end)
+AddEventHandler('papi_management:client:onPlayerLoaded', function() end)
+```
+
+## Networked Events
+
+### onPermissionUpdate
+
+Triggered when the player's permissions are updated. \
+Only works for permissions set via crews.
+
+```lua
+RegisterNetEvent('papi_crews:client:onPermissionUpdate', function() end)
+```
+
+### onCrewUpdate
+
+Triggered when the player's crew is updated.
+
+```lua
+RegisterNetEvent('papi_crews:client:onCrewUpdate', function(crew, lastCrew) end)
+RegisterNetEvent('papi_management:client:setCrew', function(crew, lastCrew) end)
+RegisterNetEvent('papi_management:setCrew', function(crew, lastCrew) end)
+```
+
+- crew: [`PlayerCrew`](../types/player.mdx#playercrew)

@@ -23,7 +23,7 @@ Guidelines for indicating that a resource is stable and ready for release.
 ## Database Practices
 
 1. Does not read directly from tables it does not own, and uses exports and functions from the owning resources to get the data instead.
-2. Has direct database calls to tables it does own in a designated storage layer of the resource (see `server/storage.lua` in qbx_core).
+2. Has direct database calls to tables it does own in a designated storage layer of the resource (see `server/storage.lua` in papi_management).
 
 ## Config Practices
 
@@ -31,7 +31,7 @@ Guidelines for indicating that a resource is stable and ready for release.
 
 ## Core Practices
 
-1. Client PlayerData is accessed using playerdata module, instead of a qbx_core export.
+1. Client PlayerData is accessed using playerdata module, instead of a papi_management export.
 2. Lib module is used to replace duplicate code like DrawText.
 
 ## Resource Quality
