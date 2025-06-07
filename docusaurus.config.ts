@@ -5,24 +5,21 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Qbox Documentation',
-  tagline: 'The official documentation for the Qbox Project',
-  favicon: 'https://files.fivemerr.com/images/b02ac973-403b-4ead-99bf-17bc307172d9.png',
+  title: '420 Documentation',
+  tagline: 'The official documentation for the 420 Project',
+  favicon: 'https://dunb17ur4ymx4.cloudfront.net/webstore/logos/f8344e97ccf9df92a2ceb567ef36ddcaaec1226e.png',
   trailingSlash: false,
   // Set the production url of your site here
-  url: 'https://docs.qbox.re',
+  url: 'https://420-docs.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Qbox-project', // Usually your GitHub org/user name.
-  projectName: 'qbox-docs', // Usually your repo name.
-
+  organizationName: '420-project', // Usually your GitHub org/user name.
+  projectName: '420-docs', // Usually your repo name.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -30,14 +27,11 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   plugins: [
     'docusaurus-plugin-image-zoom'
   ],
-
   presets: [
-    [
-      'classic',
+    ['classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
@@ -45,8 +39,8 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Qbox-project/qbox-docs',
-        },
+            'https://github.com/Mesrine67/420-docs',
+        },   
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -56,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Qbox-project/qbox-docs',
+            'https://github.com/Mesrine67/420-docs',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -94,20 +88,20 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     metadata: [
-      { name: 'keywords', content: 'qbox, qbus, qbus project, qbus documentation, qbox documentation, qbox project, fivem, redm, cfx, citizenfx, fivem framework' },
-      { name: 'og:image', content: 'https://files.fivemerr.com/images/b02ac973-403b-4ead-99bf-17bc307172d9.png' },
+      { name: 'keywords', content: 'esx, ESX, ox, OX, qbx, QBX, qbox, qbus, qbox, fivem, redm, cfx, citizenfx, fivem framework' },
+      { name: 'og:image', content: 'https://dunb17ur4ymx4.cloudfront.net/webstore/logos/f8344e97ccf9df92a2ceb567ef36ddcaaec1226e.png' },
     ],
-    algolia: {
-      appId: '7JRFEYG1CO',
-      apiKey: '329ea77a61e40a081b6e1f86126c6658',
-      indexName: 'qbox',
-      contextualSearch: true,
-      searchParameters: {},
-      searchPagePath: 'search',
-      insights: false,
-    },
+    // algolia: {
+    //   appId: '7JRFEYG1CO',
+    //   apiKey: '329ea77a61e40a081b6e1f86126c6658',
+    //   indexName: 'qbox',
+    //   contextualSearch: true,
+    //   searchParameters: {},
+    //   searchPagePath: 'search',
+    //   insights: false,
+    // },
     navbar: {
-      title: 'Qbox Documentation',
+      title: '420 Documentation',
       logo: {
         alt: 'My Site Logo',
         src: 'img/duck.png',
@@ -133,17 +127,17 @@ const config: Config = {
         },
         {to: '/blog', label: 'Tutorials', position: 'left'},
         {
-          href: 'https://hosting.qbox.re/',
+          href: 'https://hebergtonserv.com/',
           label: 'Hosting',
           position: 'right',
         },
         {
-          href: 'https://discord.gg/Z6Whda5hHA',
+          href: 'https://discord.gg/',
           className: "header-discord-link",
           position: 'right',
         },
         {
-          href: 'https://github.com/Qbox-project',
+          href: 'https://github.com/Mesrine67',
           className: "header-github-link",
           position: 'right',
         },
@@ -152,7 +146,7 @@ const config: Config = {
     // footer: {
     //   style: 'dark',
     //   links: [],
-    //   copyright: `Copyright © ${new Date().getFullYear()} Qbox Project 📦`,
+    //   copyright: `Copyright © ${new Date().getFullYear()} 420 Project 📦`,
     // },
     prism: {
       theme: prismThemes.github,
