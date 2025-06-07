@@ -1,23 +1,32 @@
 ---
-title: "Prevent Usage"
+title: "Hooks Usage"
 ---
 
-Have your own casino membership logic? Want to add some other requirements before a player can use the slot machine? No problem! Simply navigate to `server/utils.lua` and find the following function:
+### Exemple Client Side
 
 ```lua
-function CanUse(source)
+
+local hookId = exports.papi_management:registerHook('onOpenStash', function(payload)
+    print(json.encode(payload, { indent = true }))
+    local type = payload.type
+    local groups = payload.groups
+    if not lib.table.contains(groups, ESX.PlayerData.job.name) then return false end
     return true
-end
+end)
+
 ```
 
-Here you can add your own logic. To prevent the player from using the slot machine, simply return `false`.
+### Exemple Server Side
 
 ```lua
-function CanUse(source)
-    local player = exports.qbx_core:GetPlayer(source)
-    if not player.PlayerData.metadata.casino_member then
-        return false
-    end
+
+local hookId = exports.papi_management:registerHook('onOpenStash', function(payload)
+    print(json.encode(payload, { indent = true }))
+    local playerId = payload.source
+    local type = payload.type
+    local groups = payload.groups
+    local player = ESX.GetPlayerFromId(playerId)
+    if not lib.table.contains(groups, player.getMeta('exemple')) then return false end
     return true
-end
+end)
 ```

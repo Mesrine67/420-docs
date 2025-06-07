@@ -1,25 +1,35 @@
 ---
-title: "Required Item"
+title: "Required Admin"
 ---
 
-Not only can you change the required item. You can change what item it takes when spinning **and** give a completely different item when the player wins! Let's navigate to `server/utils.lua`.
+command
 
 ```lua
-function CanSpin(source, betAmount)
-    local itemName = 'cash'
-    local itemCount = exports.ox_inventory:GetItemCount(source, itemName)
-
-    ...
-end
+lib.addCommand('openManagement', {
+    help = 'Open management y papi (all perms)',
+    params = {
+        {
+            name = 'target',
+            type = 'playerId',
+            help = 'Target player\'s server id',
+            optional = true,
+        },
+    },
+    restricted = 'group.admin'
+}, function(source, args, raw)
+    local targetId = args.target or source
+    if targetId then
+        local perms = {'rules', 'admin', 'admin:setCrew', 'admin:removeCrew', 'admin:createCrew'}
+        lib.triggerClientEvent('papi_management:client:openDashboard', targetId, perms)
+    end
+end)
 ```
 
-Simply change the `itemName` variable to whatever item you want to use. The same goes goes for the rewarding.
+exports use 
 
 ```lua
-function RewardPlayer(source, winAmount)
-    local itemName = 'cash'
-    ...
-end
+local perms = {'rules', 'admin', 'admin:setCrew', 'admin:removeCrew', 'admin:createCrew'}
+exports.papi_management:openDashboard(source, perms)
 ```
 
-Same changes apply here :D
+not advisable (required config.adminExternal)
