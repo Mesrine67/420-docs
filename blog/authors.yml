@@ -1,23 +1,15 @@
-chatdisabled:
-  name: ChatDisabled
-  title: Founder of the Qbox Project
-  url: https://github.com/ChatDisabled
-  image_url: https://github.com/ChatDisabled.png
+Mesrine67:
+  name: Mesrine67
+  title: Founder of the 420 Project
+  url: https://github.com/Mesrine67
+  image_url: https://github.com/Mesrine67.png
   socials:
-    github: ChatDisabled
+    github: Mesrine67
 
-ihyajb:
-  name: aj
-  title: Contributor of the Qbox Project
-  url: https://github.com/ihyajb
-  image_url: https://github.com/ihyajb.png
+sxnsha:
+  name: sxnsha
+  title: Contributor of the sxnsha Project
+  url: https://github.com/sxnsha
+  image_url: https://github.com/sxnsha.png
   socials:
-    github: ihyajb
-  
-scorpion:
-  name: Scorpion
-  title: Volunteer for the Qbox Project
-  url: https://github.com/Scorpion7162
-  image_url: https://r2.fivemanage.com/image/Z9ftITFQ52WP.png
-  socials:
-    github: Scorpion7162
+    github: sxnsha
