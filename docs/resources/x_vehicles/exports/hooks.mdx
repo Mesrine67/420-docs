@@ -1,20 +1,20 @@
 ---
 title: Hooks
 sidebar_label: hooks
-keywords: [qbox, fivem, qbx_vehicles, exports, hooks]
-description: Documentation for event hooks in the qbx_vehicles resource. These hooks allow 3rd party resources to define new behavior without modifying qbx_vehicles code directly, providing integration points for vehicle creation and ownership changes.
+keywords: [qbox, fivem, x_vehicles, exports, hooks]
+description: Documentation for event hooks in the x_vehicles resource. These hooks allow 3rd party resources to define new behavior without modifying x_vehicles code directly, providing integration points for vehicle creation and ownership changes.
 ---
 
 # Hooks
 
-Event hooks allow 3rd party resources to define new behavior without modifying qbx_vehicles code directly.
+Event hooks allow 3rd party resources to define new behavior without modifying x_vehicles code directly.
 
 ## registerHook
 
 Registers a callback function to be triggered by a resource. Returning false from the callback function cancels the event
 
 ```lua
-exports.qbx_vehicles:registerHook(eventName, function(payload) end)
+exports.x_vehicles:registerHook(eventName, function(payload) end)
 ```
 
 - eventName: `string`
@@ -47,7 +47,7 @@ Remove a previously registered hook by it's id.
 If no id is provided then all hooks registered by the resource are removed.
 
 ```lua
-exports.qbx_vehicles:removeHooks(id)
+exports.x_vehicles:removeHooks(id)
 ```
 
 - id?: `number`
