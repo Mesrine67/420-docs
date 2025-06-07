@@ -37,9 +37,9 @@ In Qbox, the job and gang grades are numbers without quotations whereas in QBCor
 
 Qbox has a multicharacter, queue, multijob, and Discord rich presense built into papi_management. By default, all of these are enabled. If you wish to disable or customize these, do the following:
 - To disable the multicharacter system, open `papi_management/config/client.lua` and set `useExternalCharacters` to `false`.
-- To disable the queue system, open the `server.cfg` file and set `qbx:enablequeue` to `false`. To customize the queue system further, open `papi_management/config/queue.lua`.
+- To disable the queue system, open the `server.cfg` file and set `libSxn:enablequeue` to `false`. To customize the queue system further, open `papi_management/config/queue.lua`.
 - To disable or customize the Discord rich presents, open `papi_management/config/client.lua`, scroll all the way down, and edit the `discord` table.
-- To customize the multijob/multigang system, open the `server.cfg` file and set `qbx:max_jobs_per_player` and `qbx:max_gangs_per_player` to the desired values. This feature **cannot** be disabled.
+- To customize the multijob/multigang system, open the `server.cfg` file and set `libSxn:max_jobs_per_player` and `libSxn:max_gangs_per_player` to the desired values. This feature **cannot** be disabled.
   - First, double check that the player.citizenid column in your database has the proper `utf8mb4_unicode_ci` collation. If not, change it. Then, run the `papi_management.sql` file to create the new player_groups table.
   - Start the server and then type `convertjobs` into the txAdmin colsone once the server is running to populare the player_groups table.
   - **Do not use external multijob/multigang resources that aren't guaranteed to be Qbox compatible.** Using incompatible multijobs or resources which modify the core's database tables may lead to data corruption!
@@ -68,8 +68,8 @@ Instead, the data can be accessed via a combination of export functions and impo
 
 ```lua
 QBCore.Functions. -> exports.papi_management:
-QBCore.Functions.GetPlayerData() -> QBX.PlayerData -- requires importing the playerdata module
-QBCore.Functions.GetPlate(vehicle) -> qbx.getVehiclePlate(vehicle) -- requires importing the lib module
+QBCore.Functions.GetPlayerData() -> libSxn.PlayerData -- requires importing the playerdata module
+QBCore.Functions.GetPlate(vehicle) -> libSxn.getVehiclePlate(vehicle) -- requires importing the lib module
 QBCore.Shared.Jobs -> exports.papi_management:GetJobs()
 QBCore.Shared.Gangs -> exports.papi_management:GetGangs()
 QBCore.Shared.Vehicles -> exports.papi_management:GetVehiclesByName()

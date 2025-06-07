@@ -12,7 +12,7 @@ description: Documentation for client-side library functions in the 420 resource
 Draws text onto the screen in 2D space for a single frame.
 
 ```lua
-qbx.drawText2d(params)
+libSxn.drawText2d(params)
 ```
 
 - params: `table`
@@ -39,7 +39,7 @@ qbx.drawText2d(params)
 Draws text onto the screen in 3D space for a single frame.
 
 ```lua
-qbx.drawText3d(params)
+libSxn.drawText3d(params)
 ```
 
 - params: `table`
@@ -66,7 +66,7 @@ Gets and returns an entity handle and network id from a state bag name. \
 Will return `0` for both if an invalid entity was received.
 
 ```lua
-qbx.getEntityAndNetIdFromBagName(bagName)
+libSxn.getEntityAndNetIdFromBagName(bagName)
 ```
 
 - bagName: `string`
@@ -81,7 +81,7 @@ Returns:
 Returns a state bag handler made for entities.
 
 ```lua
-qbx.entityStateHandler(keyFilter, cb)
+libSxn.entityStateHandler(keyFilter, cb)
 ```
 
 - keyFilter: `string`
@@ -94,7 +94,7 @@ Returns: `number`
 Deletes the specified vehicle and returns whether it was successful.
 
 ```lua
-qbx.deleteVehicle(vehicle)
+libSxn.deleteVehicle(vehicle)
 ```
 
 - vehicle: `integer`
@@ -106,7 +106,7 @@ Returns: `boolean`
 Returns the model name of the given vehicle.
 
 ```lua
-qbx.getVehicleDisplayName(vehicle)
+libSxn.getVehicleDisplayName(vehicle)
 ```
 
 - vehicle: `integer`
@@ -118,7 +118,7 @@ Returns: `string`
 Returns the brand name of the given vehicle.
 
 ```lua
-qbx.getVehicleMakeName(vehicle)
+libSxn.getVehicleMakeName(vehicle)
 ```
 
 - vehicle: `integer`
@@ -130,7 +130,7 @@ Returns: `string`
 Returns the mod type name of the given vehicle.
 
 ```lua
-qbx.getVehicleModName(vehicle, modType, modIndex)
+libSxn.getVehicleModName(vehicle, modType, modIndex)
 ```
 
 - vehicle: `integer`
@@ -144,7 +144,7 @@ Returns: `string`
 Returns the livery name of the given vehicle.
 
 ```lua
-qbx.getVehicleLiveryName(vehicle, liveryIndex)
+libSxn.getVehicleLiveryName(vehicle, liveryIndex)
 ```
 
 - vehicle: `integer`
@@ -157,7 +157,7 @@ Returns: `string`
 Returns the street name and cross section name at the given coords.
 
 ```lua
-qbx.getStreetName(coords)
+libSxn.getStreetName(coords)
 ```
 
 - coords: `vector3`
@@ -173,7 +173,7 @@ Returns:
 Returns the name of the zone at the given coords.
 
 ```lua
-qbx.getZoneName(coords)
+libSxn.getZoneName(coords)
 ```
 
 - coords: `vector3`
@@ -185,7 +185,7 @@ Returns: `string`
 Set an extra on the given vehicle.
 
 ```lua
-qbx.setVehicleExtra(vehicle, extra, enable)
+libSxn.setVehicleExtra(vehicle, extra, enable)
 ```
 
 - vehicle: `integer`
@@ -198,7 +198,7 @@ qbx.setVehicleExtra(vehicle, extra, enable)
 Enables all the extras of the given vehicle.
 
 ```lua
-qbx.resetVehicleExtras(vehicle)
+libSxn.resetVehicleExtras(vehicle)
 ```
 
 - vehicle: `integer`
@@ -208,7 +208,7 @@ qbx.resetVehicleExtras(vehicle)
 Sets all the extras of the given vehicle.
 
 ```lua
-qbx.setVehicleExtra(vehicle, extras)
+libSxn.setVehicleExtra(vehicle, extras)
 ```
 
 - vehicle: `integer`
@@ -219,7 +219,7 @@ qbx.setVehicleExtra(vehicle, extras)
 Returns if the local ped is wearing gloves.
 
 ```lua
-qbx.isWearingGloves()
+libSxn.isWearingGloves()
 ```
 
 Returns: `boolean`
@@ -229,7 +229,7 @@ Returns: `boolean`
 Returns if the local ped is wearing a duffel bag.
 
 ```lua
-qbx.isWearingDuffelbag()
+libSxn.isWearingDuffelbag()
 ```
 
 Returns: `boolean`
@@ -240,7 +240,7 @@ Attempts to load an audio bank and returns whether it was successful. \
 Remember to use `ReleaseScriptAudioBank` since you can only load up to 10 banks.
 
 ```lua
-qbx.loadAudioBank(audioBank, timeout)
+libSxn.loadAudioBank(audioBank, timeout)
 ```
 
 - audioBank: `string`
@@ -255,7 +255,7 @@ If `returnSoundId` is false or not specified the soundId is released, \
 otherwise the function returns the soundId without releasing it.
 
 ```lua
-qbx.playAudio(params)
+libSxn.playAudio(params)
 ```
 
 - params: `table`

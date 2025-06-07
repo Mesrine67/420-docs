@@ -10,10 +10,10 @@ description: Documentation for shared library functions in the 420_resource reso
 ## armsWithoutGloves.male
 
 A set of male torso drawable variations that don't have gloves. \
-Used for [`qbx.isWearingGloves`](./client#iswearinggloves) and backwards compatibility.
+Used for [`libSxn.isWearingGloves`](./client#iswearinggloves) and backwards compatibility.
 
 ```lua
-qbx.armsWithoutGloves.male
+libSxn.armsWithoutGloves.male
 ```
 
 Type: `table<integer, true>`
@@ -21,10 +21,10 @@ Type: `table<integer, true>`
 ## armsWithoutGloves.female
 
 A set of female torso drawable variations that don't have gloves. \
-Used for [`qbx.isWearingGloves`](./client#iswearinggloves) and backwards compatibility.
+Used for [`libSxn.isWearingGloves`](./client#iswearinggloves) and backwards compatibility.
 
 ```lua
-qbx.armsWithoutGloves.female
+libSxn.armsWithoutGloves.female
 ```
 
 Type: `table<integer, true>`
@@ -34,7 +34,7 @@ Type: `table<integer, true>`
 Returns the given string with its trailing whitespaces removed.
 
 ```lua
-qbx.string.trim(str)
+libSxn.string.trim(str)
 ```
 
 - str: `string`
@@ -46,7 +46,7 @@ Returns: `string`
 Returns the given string with its first character capitalized.
 
 ```lua
-qbx.string.capitalize(str)
+libSxn.string.capitalize(str)
 ```
 
 - str: `string`
@@ -58,7 +58,7 @@ Returns: `string`
 Rounds and returns the given number.
 
 ```lua
-qbx.math.round(num, decimalPlaces)
+libSxn.math.round(num, decimalPlaces)
 ```
 
 - num: `number`
@@ -71,7 +71,7 @@ Returns: `number`
 Returns the number of items in a table. Useful for non-array tables.
 
 ```lua
-qbx.table.size(tbl)
+libSxn.table.size(tbl)
 ```
 
 - tbl: `table`
@@ -83,7 +83,7 @@ Returns: `integer`
 Maps and returns the values of the given table by the given subfield.
 
 ```lua
-qbx.table.mapBySubfield(tbl, subfield)
+libSxn.table.mapBySubfield(tbl, subfield)
 ```
 
 - tbl: `table`
@@ -103,7 +103,7 @@ local tble = {
   },
 }
 
-local mapped = qbx.table.mapBySubfield(tble, 'myCategory')
+local mapped = libSxn.table.mapBySubfield(tble, 'myCategory')
 
 print(json.encode(mapped))
 -- Output: { "first": [{ myCategory: "first", someValue: 1 }], "second": [{ myCategory: "second", someValue: 2 }] }
@@ -114,7 +114,7 @@ print(json.encode(mapped))
 Returns the number plate of the given vehicle, or `nil` if the vehicle or plate does not exist.
 
 ```lua
-qbx.getVehiclePlate(vehicle)
+libSxn.getVehiclePlate(vehicle)
 ```
 
 - vehicle: `integer`
@@ -131,7 +131,7 @@ Note that the generated plate may or may not be already used by an existing vehi
 :::
 
 ```lua
-qbx.generateRandomPlate(pattern)
+libSxn.generateRandomPlate(pattern)
 ```
 
 - pattern?: `string`
@@ -161,7 +161,7 @@ West  |           X           |  East
 (art inspired by [`SET_PED_TURNING_THRESHOLDS`](https://github.com/citizenfx/fivem/blob/0b61c93a3308360ea70d443398eab17f47453e11/code/components/extra-natives-five/src/PedExtraNatives.cpp#L390-L400))
 
 ```lua
-qbx.getCardinalDirection(entity)
+libSxn.getCardinalDirection(entity)
 ```
 
 - entity: `integer`
@@ -173,7 +173,7 @@ Returns: `'North' | 'South' | 'East' | 'West'`
 Returns true if the given array contains the given value
 
 ```lua
-qbx.array.contains(arr, value)
+libSxn.array.contains(arr, value)
 ```
 
 - arr: `table`

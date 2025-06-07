@@ -12,7 +12,7 @@ description: Documentation for server-side library functions in the 420 resource
 Creates a vehicle on the server-side and returns its net ID. If this is a player owned vehicle, and the persistence convar is enabled, the spawned vehicle will be persisted.
 
 ```lua
-qbx.spawnVehicle(params)
+libSxn.spawnVehicle(params)
 ```
 
 - params: `table`
@@ -35,14 +35,14 @@ Returns:
 
 ```lua
 -- spawns the vehicle at `myVectorCoords` and warps `myPed` inside
-qbx.spawnVehicle({
+libSxn.spawnVehicle({
   model = `asbo`,
   spawnSource = myVectorCoords,
   warp = myPed,
 })
 
 -- spawns the vehicle at `myPed` and warps the same ped inside
-qbx.spawnVehicle({
+libSxn.spawnVehicle({
   model = `asbo`,
   spawnSource = myPed,
   warp = true, -- causes `myPed` to be warped into the vehicle

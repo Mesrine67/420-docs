@@ -1,18 +1,18 @@
 ---
 title: Server Exports
 sidebar_label: server
-keywords: [qbox, fivem, qbx_garages, exports]
-description: Documentation for server-side exports available in the qbx_garages resource. These exports provide programmatic control over garage management, vehicle storage locations, and depot pricing within the Qbox framework.
+keywords: [qbox, fivem, x_garages, exports]
+description: Documentation for server-side exports available in the x_garages resource. These exports provide programmatic control over garage management, vehicle storage locations, and depot pricing within the Qbox framework.
 ---
 
 # Server Exports
 
 ## RegisterGarage
 
-Registers a garage at runtime. This is an alternative to defining them in the qbx_garages config.
+Registers a garage at runtime. This is an alternative to defining them in the x_garages config.
 
 ```lua
-exports.qbx_garages:RegisterGarage(name, config)
+exports.x_garages:RegisterGarage(name, config)
 ```
 
 ## SetVehicleGarage
@@ -20,7 +20,7 @@ exports.qbx_garages:RegisterGarage(name, config)
 Sets the vehicle's garage. Only affects the database.
 
 ```lua
-exports.qbx_garages:SetVehicleGarage(vehicleId, garageName)
+exports.x_garages:SetVehicleGarage(vehicleId, garageName)
 ```
 
 ## SetVehicleDepotPrice
@@ -28,7 +28,7 @@ exports.qbx_garages:SetVehicleGarage(vehicleId, garageName)
 Sets the price to take the car out of the depot
 
 ```lua
-exports.qbx_garages:SetVehicleDepotPrice(vehicleId, depotPrice)
+exports.x_garages:SetVehicleDepotPrice(vehicleId, depotPrice)
 ```
 
 ## GetGarages
@@ -36,5 +36,5 @@ exports.qbx_garages:SetVehicleDepotPrice(vehicleId, depotPrice)
 Returns the registered garages
 
 ```lua
-exports.qbx_garages:GetGarages()
+exports.x_garages:GetGarages()
 ```

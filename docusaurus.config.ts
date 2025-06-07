@@ -88,7 +88,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     metadata: [
-      { name: 'keywords', content: 'esx, ESX, ox, OX, qbx, QBX, qbox, qbus, qbox, fivem, redm, cfx, citizenfx, fivem framework' },
+      { name: 'keywords', content: 'esx, ESX, ox, OX, qbox, qbus, qbox, fivem, redm, cfx, citizenfx, fivem framework' },
       { name: 'og:image', content: 'https://dunb17ur4ymx4.cloudfront.net/webstore/logos/f8344e97ccf9df92a2ceb567ef36ddcaaec1226e.png' },
     ],
     // algolia: {
